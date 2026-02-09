@@ -1,0 +1,87 @@
+{
+  "config": {
+    "curriculum_level": 2,
+    "enable_current": true,
+    "V_c_max": 0.075,
+    "current_mode": "fixed",
+    "enable_wind": true,
+    "V_w_max": 1.2,
+    "wind_mode": "fixed",
+    "max_episode_steps": 2000,
+    "dt": 0.1
+  },
+  "num_episodes": 5,
+  "success_count": 0,
+  "trajectories": [
+    {
+      "episode": 0,
+      "success": false,
+      "steps": 1075,
+      "final_position": [
+        3.9833842083896207,
+        -4.94347196424536
+      ],
+      "final_heading": -63.17442327348109,
+      "V_c": 0.05,
+      "beta_c": 5.5362374145096345,
+      "V_w": 0.5,
+      "beta_w": 0.07211976851112588
+    },
+    {
+      "episode": 1,
+      "success": false,
+      "steps": 378,
+      "final_position": [
+        -1.8774699166786775,
+        7.134705203474468
+      ],
+      "final_heading": 151.27997412634443,
+      "V_c": 0.05,
+      "beta_c": 2.956172091707197,
+      "V_w": 0.5,
+      "beta_w": 0.6074826154286891
+    },
+    {
+      "episode": 2,
+      "success": false,
+      "steps": 461,
+      "final_position": [
+        1.3182300929995168,
+        9.320605630119905
+      ],
+      "final_heading": 121.83564977592621,
+      "V_c": 0.05,
+      "beta_c": 0.8107617674820109,
+      "V_w": 0.5,
+      "beta_w": 0.7458788511553476
+    },
+    {
+      "episode": 3,
+      "success": false,
+      "steps": 767,
+      "final_position": [
+        1.6815162654499087,
+        -4.97248758182009
+      ],
+      "final_heading": -33.90991037017756,
+      "V_c": 0.05,
+      "beta_c": 5.111386486735279,
+      "V_w": 0.5,
+      "beta_w": 3.7388847570779697
+    },
+    {
+      "episode": 4,
+      "success": false,
+      "steps": 793,
+      "final_position": [
+        2.5032887687090546,
+        -5.448707453894763
+      ],
+      "final_heading": -23.61018121973153,
+      "V_c": 0.05,
+      "beta_c": 5.022161163804655,
+      "V_w": 0.5,
+      "beta_w": 1.1077638850993166
+    }
+  ]
+}

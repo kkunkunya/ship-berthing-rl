@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.DS_Store
+.vscode/
+.idea/
+
+# 大文件（避免 GitHub 限制）
+*.zip
+*.tar.gz
+*.rar
+assets/checkpoints/
+log/
+# 大型动画文件 (>100MB)
+assets/results/demo_delivery/animations/*.gif
+
+# 项目特定
+.doc-cache/
+.agent-locks/

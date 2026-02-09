@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-01-21 01:43:33",
+  "episodes": 512,
+  "success_count": 512,
+  "success_rate": 1.0,
+  "fail_count": 0,
+  "fail_rate": 0.0,
+  "failure_ratios_among_failed": {
+    "position": 0.0,
+    "velocity": 0.0,
+    "heading": 0.0,
+    "yaw_rate": 0.0
+  },
+  "failure_counts": {
+    "position": 0,
+    "velocity": 0,
+    "heading": 0,
+    "yaw_rate": 0
+  },
+  "failure_value_means": {
+    "position": 0.0,
+    "velocity": 0.0,
+    "heading_deg": 0.0,
+    "yaw_rate": 0.0
+  },
+  "termination_counts": {
+    "timeout": 0,
+    "out_of_bounds": 0
+  },
+  "tolerances": {
+    "position": 0.8,
+    "velocity": 0.1,
+    "heading_rad": 0.175,
+    "yaw_rate": 0.05
+  },
+  "config": {
+    "curriculum_level": 2,
+    "enable_current": true,
+    "V_c_max": 0.075,
+    "current_mode": "fixed",
+    "enable_wind": true,
+    "V_w_max": 1.2,
+    "wind_mode": "fixed"
+  },
+  "checkpoint": "assets/checkpoints/demo_delivery/per_sac_otter_checkpoint_400.pth"
+}

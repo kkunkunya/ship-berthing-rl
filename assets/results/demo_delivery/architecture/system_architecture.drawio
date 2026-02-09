@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" modified="2026-01-21T00:00:00.000Z" agent="Claude" version="22.1.0">
+  <diagram name="System Architecture" id="system-arch">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Environment Box -->
+        <mxCell id="env-box" value="Ship Berthing Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="400" height="280" as="geometry"/>
+        </mxCell>
+
+        <!-- Environment Components -->
+        <mxCell id="env-usv" value="USV Dynamics&#xa;(Otter Model)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="120" y="160" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="env-traj" value="Reference&#xa;Trajectory" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="env-berth" value="Berth Position&#xa;(70, 95)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="120" y="240" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="env-obs" value="Observation State&#xa;(30D)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="env-dist" value="Disturbances&#xa;Current: 0.075 m/s&#xa;Wind: 1.2 m/s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="320" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- SAC Agent Box -->
+        <mxCell id="agent-box" value="SAC Agent with PER" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="600" y="120" width="480" height="280" as="geometry"/>
+        </mxCell>
+
+        <!-- Agent Components -->
+        <mxCell id="agent-actor" value="Actor Network&#xa;30D → 256 → 256 → 2D" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="640" y="160" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent-critic" value="Critic Network&#xa;32D → 256 → 256 → 1D" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="860" y="160" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent-entropy" value="Adaptive Entropy&#xa;α (Temperature)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="640" y="240" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent-per" value="Prioritized Experience&#xa;Replay Buffer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="860" y="240" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent-target" value="Target Networks&#xa;τ = 0.005" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="400" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Curriculum Learning Box -->
+        <mxCell id="curr-box" value="Curriculum Learning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="480" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Curriculum Levels -->
+        <mxCell id="curr-l1" value="Level 1: Easy&#xa;Pos: 0.5m, Vel: 0.08m/s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="120" y="520" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="curr-l2" value="Level 2: Medium&#xa;Pos: 0.3m, Vel: 0.05m/s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="520" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="curr-l3" value="Level 3: Hard&#xa;Pos: 0.2m, Vel: 0.03m/s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="120" y="600" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="curr-l4" value="Level 4: Expert&#xa;Pos: 0.1m, Vel: 0.015m/s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="600" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Training Config Box -->
+        <mxCell id="train-box" value="Training Configuration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="600" y="480" width="480" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- Training Config -->
+        <mxCell id="train-config" value="Algorithm: SAC with PER&#xa;Batch Size: 256&#xa;Learning Rate: 3e-4&#xa;Discount Factor: 0.99&#xa;Replay Buffer: 1M&#xa;UTD Ratio: 1.0&#xa;Num Envs: 32" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="640" y="520" width="400" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="arrow1" value="State (30D)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="env-box" target="agent-box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arrow2" value="Action (2D)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="agent-box" target="env-box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title" value="SAC-PER Ship Berthing System Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="560" height="40" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
