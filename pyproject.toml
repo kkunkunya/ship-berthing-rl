@@ -5,7 +5,7 @@ description = "Otter USV Ship Berthing with PER-SAC"
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.24.0",
-    "gymnasium>=0.29.0",
+    "gymnasium>=1.2.3",
     "scipy>=1.11.0",
     "matplotlib>=3.7.0",
     "gym>=0.26.2",
