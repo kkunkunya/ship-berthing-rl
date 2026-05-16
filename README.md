@@ -1,3 +1,9 @@
+# ship-berthing-rl
+
+## Portfolio positioning
+
+This is a research portfolio project for USV ship berthing with PER-SAC reinforcement learning. It represents the robotics/control side of my reinforcement-learning work.
+
 <!-- Logo 区域 - 替换为你的项目 Logo -->
 <div align="center">
 
